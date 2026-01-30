@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "vercel-build": "npm ci && npm run build",
     "dev": "vite",
-    "build": "chmod +x node_modules/.bin/vite && vite build",
+    "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "vercel-build": "npm ci && npm run build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
