@@ -8,5 +8,5 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true
   },
-  base: process.env.VITE_BASE_PATH || "/estudiopenalferro-update-2"
+  base: process.env.VITE_BASE_PATH || "/estudiopenalferro-update-3"
 })
