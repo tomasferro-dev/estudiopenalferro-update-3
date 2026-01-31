@@ -1,20 +1,41 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Topbar() {
 	const [activeSection, setActiveSection] = useState('bienvenido');
 	const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+		const element = document.getElementById(id);
+		if (!element) return;
+    setActiveSection(id); 
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
+		element.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+		});
+	};
+
+	useEffect(() => {
+    const sections = document.querySelectorAll('section[id]');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        // 👇 CLAVE: detecta cuando la sección está “centrada”
+        rootMargin: '-80% 0px -40% 0px',
+        threshold: 0,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
 
 	return(
 		<nav className="
@@ -39,7 +60,7 @@ export default function Topbar() {
 				{/* Navigation */}
 				<ul className="flex items-center gap-2">
 					{[
-						{ id: 'bienvenido', label: 'Bienvenido' },
+						{ id: 'bienvenido', label: 'Inicio' },
 						{ id: 'areas', label: 'Servicios' },
 						{ id: 'sobre-nosotros', label: 'Sobre Nosotros' },
 						{ id: 'global', label: 'Menciones Globales' },

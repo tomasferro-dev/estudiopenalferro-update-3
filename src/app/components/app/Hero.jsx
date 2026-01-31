@@ -1,25 +1,26 @@
-import { ChevronDown, CheckCircle2 } from "lucide-react";
+import { ChevronDown, CheckCircle2, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import heroImage from "../../../assets/images/fondo2.jpg";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Hero() {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 80;
+      const offset = 0;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
   return (
     <section
       id="bienvenido"
-      className="relative min-h-screen w-full flex items-center justify-center"
+      className="relative min-h-screen w-full flex items-center justify-center  "
       style={{
         backgroundImage: `
           linear-gradient(
@@ -30,14 +31,13 @@ export default function Hero() {
           ),
           url(${heroImage})
         `,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'fixed',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
       }}
     >
       <div className="w-full max-w-6xl mx-auto px-6 lg:px-12 py-20 text-center">
-      
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -62,14 +62,14 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
           className="text-lg md:text-xl text-[#D4CDB8] max-w-3xl mx-auto mb-12 leading-relaxed"
         >
-          Somos un grupo de Abogados que ofrece Servicios Legales a Personas y Empresas. Nos destacamos por nuestra
-          Atención Personalizada y al Instante. Trabajamos para Econtrar la Mejor Solución a tu Situación.
+          Somos un grupo de Abogados que ofrece Servicios Legales a Personas y
+          Empresas. Nos destacamos por nuestra Atención Personalizada y al
+          Instante. Trabajamos para Econtrar la Mejor Solución a tu Situación.
         </motion.p>
 
         {/* Features */}
         {/* <div className="flex flex-wrap gap-6 mb-24 items-center"> */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-24 place-items-center text-center">
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 place-items-center text-center">
           <div className="flex items-center gap-2 text-white">
             <CheckCircle2 className="w-5 h-5 text-[#fcbf49]" />
             <span>Atención 100% Personalizada</span>
@@ -85,15 +85,30 @@ export default function Hero() {
         </div>
 
         <button
-          onClick={() => scrollToSection('areas')}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 animate-bounce"
+          onClick={() => scrollToSection("areas")}
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 
+             flex flex-col items-center gap-1 text-white"
           aria-label="Scroll to services"
         >
-          <ChevronDown className="w-10 h-10 text-white" />
+          <span className="text-sm tracking-wide uppercase">
+            Nuestros Servicios
+          </span>
+          <ChevronDown className="w-10 h-10" />
         </button>
+
+        <a
+          href="https://wa.me/2616589732"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-[#C4A259] text-[#1A1918] px-8 py-4 text-sm
+                   font-semibold tracking-[0.08em] uppercase hover:bg-[#D4B36A] transition-all duration-300 
+                   shadow-lg hover:shadow-xl rounded-sm mb-6"
+        >
+          <FaWhatsapp className="text-gray text-2xl" />
+          Contactanos Hoy
+          <ChevronRight size={18} />
+        </a>
       </div>
     </section>
-
-  )
+  );
 }
-   

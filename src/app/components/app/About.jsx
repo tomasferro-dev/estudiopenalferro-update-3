@@ -3,7 +3,19 @@ import { Menu, X, Phone, Mail, MapPin, ChevronRight, ShieldCheck, Scale, Binary,
 import aboutImage from "../../../assets/images/josefina-recreado.png";
 import heroImage from "../../../assets/images/fondo1.jpg";
 
+const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 0;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
 
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 export default function About() {
   return(
     <section
