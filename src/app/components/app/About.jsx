@@ -1,7 +1,7 @@
 
 import { Menu, X, Phone, Mail, MapPin, ChevronRight, ShieldCheck, Scale, Binary, ChevronDown} from 'lucide-react';
-import aboutImage from "../../../assets/images/josefina-recreado.png";
-import heroImage from "../../../assets/images/fondo1.jpg";
+import aboutImage from "../../../assets/comprimido/josefina-recreado.jpg";
+import heroImage from "../../../assets/comprimido/fondo1.jpg";
 
 const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -20,22 +20,8 @@ export default function About() {
   return(
     <section
       id="sobre-nosotros"
-      className="py-20 lg:py-32 bg-[#B8A67D]"
-      style={{
-              backgroundImage: `
-                linear-gradient(
-            to top,
-            rgba(17,24,39,0.85),
-            rgba(17,24,39,0.65),
-            rgba(196,162,89,0.35)
-                ),
-                url(${heroImage})
-              `,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              backgroundAttachment: 'fixed',
-            }}
+      className="py-20 lg:py-32"
+      
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">

@@ -3,16 +3,6 @@
 import { useState } from "react";
 import "./CopyButton.css";
 
-/**
- * CopyButton
- * - Copia texto al portapapeles con feedback visual y accesible.
- * - Optimizado para móvil (tamaño táctil, animaciones suaves, estados claros).
- *
- * Props:
- *  - text: string a copiar.
- *  - label?: texto del botón (por defecto "Copiar").
- *  - className?: estilos extra para personalizar.
- */
 export default function CopyButton({
   text,
   label = "Copiar",

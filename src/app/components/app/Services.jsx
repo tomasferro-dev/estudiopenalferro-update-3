@@ -7,11 +7,11 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { FileUser } from "lucide-react";
-import heroImage from "../../../assets/images/fondo4.jpg";
-import defensaImage from "../../../assets/images/defensa.jpg";
-import litigacionImage from "../../../assets/images/litigacion.jpg";
-import ciberdelitoImage from "../../../assets/images/ciberdelito.jpg";
-import migracionesImage from "../../../assets/images/migraciones.jpg";
+import heroImage from "../../../assets/comprimido/fondo4.jpg";
+import defensaImage from "../../../assets/comprimido/defensa.jpg";
+import litigacionImage from "../../../assets/comprimido/litigacion.jpg";
+import ciberdelitoImage from "../../../assets/comprimido/ciberdelito.jpg";
+import migracionesImage from "../../../assets/comprimido/migraciones.jpg";
 import { useState } from "react";
 import ImageCredit from "../utils/ImageCredit";
 import { FaWhatsapp } from "react-icons/fa";

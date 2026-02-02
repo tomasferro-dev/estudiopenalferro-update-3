@@ -6,6 +6,9 @@ import Topbar from '../app/components/app/Topbar.jsx';
 import Services from '../app/components/app/Services.jsx';
 import About from '../app/components/app/About.jsx';
 import Contact from '../app/components/app/Contact.jsx';
+import Footer from '../app/components/app/Footer.jsx';
+import Recognition from '../app/components/app/Recognition.jsx';
+import SharedBackground from '../app/components/utils/SharedBackground.jsx';
 
 
 export default function App() {
@@ -75,19 +78,13 @@ export default function App() {
       <main>
         <Hero/>
         <Services/>
-        <About/>
+        <SharedBackground>
+          <About/>
+          <Recognition/>
+        </SharedBackground>
         <Contact/>
-
-        {/* Footer */}
-        <footer className="bg-[#1A1918] border-t border-[#3D3C38] py-8">
-          <div className="max-w-6xl mx-auto px-6 lg:px-12">
-            <div className="text-center">
-              <p className="text-[#9D9585] text-sm tracking-wide">
-                © 2026 Estudio Jurídico Penal Ferro y Asoc. Todos los derechos reservados.
-              </p>
-            </div>
-          </div>
-        </footer>
+        <Footer/>
+        
       </main>
     </div>
   );

@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --cbg: #1f2937; /* Gray-800 */
+    --cbg: #333e4f81; /* Gray-800 */
     --cfg: #e5e7eb; /* Gray-200 */
     --cbg-hover: #374151; /* Gray-700 */
     --cbg-active: #4b5563; /* Gray-600 */

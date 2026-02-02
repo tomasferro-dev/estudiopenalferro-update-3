@@ -1,6 +1,6 @@
 import { ChevronDown, CheckCircle2, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImage from "../../../assets/images/fondo2.jpg";
+import heroImage from "../../../assets/comprimido/fondo2.jpg";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Hero() {

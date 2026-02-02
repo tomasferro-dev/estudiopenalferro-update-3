@@ -63,7 +63,6 @@ export default function Topbar() {
 						{ id: 'bienvenido', label: 'Inicio' },
 						{ id: 'areas', label: 'Servicios' },
 						{ id: 'sobre-nosotros', label: 'Sobre Nosotros' },
-						{ id: 'global', label: 'Menciones Globales' },
 						{ id: 'contacto', label: 'Contacto' },
 					].map((item) => (
 						<li key={item.id}>
