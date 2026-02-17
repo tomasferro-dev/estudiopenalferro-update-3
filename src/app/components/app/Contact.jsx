@@ -1,5 +1,4 @@
 import { Phone, Mail, MapPin, ChevronRight, Send } from "lucide-react";
-import { useState } from "react";
 import CopyButton from "../ui/CoppyButton";
 import heroImage from "../../../assets/comprimido/contacto.jpg";
 import { FaWhatsapp } from "react-icons/fa";
@@ -103,7 +102,7 @@ export default function Contact() {
                 estudioabogferro@gmail.com
               </p>
               <div className="z-20 pointer-events-auto mt-6">
-                <CopyButton text="+5492616123456" label="Copiar" />
+                <CopyButton text="estudioabogferro@gmail.com" label="Copiar" />
               </div>
             </div>
           </a>
@@ -131,7 +130,7 @@ export default function Contact() {
               </h3>
               <p className="text-[#E6DDC6] text-base">Mendoza, Argentina</p>
               <div className="z-20 pointer-events-auto mt-6">
-                <CopyButton text="+5492616123456" label="Copiar" />
+                <CopyButton text="https://maps.google.com/?q=Av. Bartolomé Mitre 565, Mendoza" label="Copiar" />
               </div>
             </div>
           </a>
@@ -207,7 +206,7 @@ export default function Contact() {
         {/* GIF / IMAGEN IZQUIERDA */}
         <div className="w-full h-[280px] sm:h-[360px] lg:h-full rounded-md overflow-hidden flex items-center justify-center">
           <img
-            src="/images/logo-sinfondo.png"
+            src="/images/logo-6.png"
             alt="Logo Estudio Penal Ferro"
             className="
               max-w-[440px]
@@ -221,7 +220,7 @@ export default function Contact() {
         </div>
 
         {/* FORMULARIO */}
-        <div className="bg-[#1A1918]/80 backdrop-blur-sm rounded-md p-8 lg:p-10 shadow-xl mr-20">
+        <div className="bg-[#1A1918]/80 backdrop-blur-sm rounded-md p-8 lg:p-10 shadow-xl lg:mr-20">
           <h3 className="text-3xl font-serif font-light text-white tracking-wide mb-6">
             Contáctanos hoy
           </h3>

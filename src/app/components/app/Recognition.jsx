@@ -15,7 +15,7 @@ export default function Recognition() {
   }, []);
 
   return (
-    <section className="py-20 lg:py-28">
+    <section className="pt-8 pb-20 lg:pb-28">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         {/* HEADER */}
         <div className="max-w-3xl mb-16">

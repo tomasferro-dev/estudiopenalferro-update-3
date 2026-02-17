@@ -37,7 +37,7 @@ export default function Hero() {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="w-full max-w-6xl mx-auto px-6 lg:px-12 py-20 text-center">
+      <div className="w-full max-w-6xl mx-auto px-6 lg:px-12 py-20 text-center ">
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,16 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-          className="text-lg md:text-xl text-[#D4CDB8] max-w-3xl mx-auto mb-12 leading-relaxed"
+          className="text-base
+            sm:text-lg
+            md:text-xl
+            text-[#D4CDB8]
+            max-w-xl
+            md:max-w-3xl
+            mx-auto
+            text-left
+            mb-8
+            leading-relaxed"
         >
           Somos un grupo de Abogados que ofrece Servicios Legales a Personas y
           Empresas. Nos destacamos por nuestra Atención Personalizada y al
@@ -69,18 +78,20 @@ export default function Hero() {
 
         {/* Features */}
         {/* <div className="flex flex-wrap gap-6 mb-24 items-center"> */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10 place-items-center text-center">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-sm sm:text-base"
+        >
           <div className="flex items-center gap-2 text-white">
             <CheckCircle2 className="w-5 h-5 text-[#fcbf49]" />
             <span>Atención 100% Personalizada</span>
           </div>
           <div className="flex items-center gap-2 text-white">
             <CheckCircle2 className="w-5 h-5 text-[#fcbf49]" />
-            <span>Respondemos tu Consulta en el día</span>
+            <span>Respondemos tu Consulta en el Día</span>
           </div>
-          <div className="flex items-center gap-2 text-white ">
+          <div className="flex items-center gap-2 text-white mb-8">
             <CheckCircle2 className="w-5 h-5 text-[#fcbf49]" />
-            <span>Presupuesto y asesoramiento sin cargo</span>
+            <span>Presupuesto y Asesoramiento Sin Cargo</span>
           </div>
         </div>
 
