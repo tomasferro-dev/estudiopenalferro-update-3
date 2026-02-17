@@ -79,7 +79,8 @@ export default function Hero() {
         {/* Features */}
         {/* <div className="flex flex-wrap gap-6 mb-24 items-center"> */}
         <div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-sm sm:text-base"
+          className="grid grid-cols-1  lg:grid-cols-3 gap-4 sm:gap-6 text-sm 
+          sm:text-base mb-8"
         >
           <div className="flex items-center gap-2 text-white">
             <CheckCircle2 className="w-5 h-5 text-[#fcbf49]" />
@@ -89,7 +90,7 @@ export default function Hero() {
             <CheckCircle2 className="w-5 h-5 text-[#fcbf49]" />
             <span>Respondemos tu Consulta en el Día</span>
           </div>
-          <div className="flex items-center gap-2 text-white mb-8">
+          <div className="flex items-center gap-2 text-white">
             <CheckCircle2 className="w-5 h-5 text-[#fcbf49]" />
             <span>Presupuesto y Asesoramiento Sin Cargo</span>
           </div>
